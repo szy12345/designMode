@@ -10,7 +10,8 @@ public class Test {
         filterChain.addFilter(new SensitiveFilter())
                 .addFilter(new SpecialCharFilter())
                 .addFilter(new MonetaryUnitFilter());
-        str = filterChain.doFilter(str);
-        System.out.println(str);
+        StringBuilder str1 = new StringBuilder("");
+        StringBuilder str2 = new StringBuilder("");
+        filterChain.doFilter(str1,str2);
     }
 }

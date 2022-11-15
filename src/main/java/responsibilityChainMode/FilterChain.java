@@ -15,11 +15,11 @@ public class FilterChain {
         return this;
     }
 
-    public String doFilter(String str){
-        for(Filter filter:filterList){
-            str = filter.doFilter(str);
-        }
-        return str;
+    public void doFilter(StringBuilder str1,StringBuilder str2,int idex){
+        this.filterList.get(idex).doFilter(str1,str2,this);
+        System.out.println("str1:"+str1.toString());
+        System.out.println("str2:"+str2.toString());
+
     }
 
 }
