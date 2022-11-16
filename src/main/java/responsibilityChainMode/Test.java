@@ -13,5 +13,7 @@ public class Test {
         StringBuilder str1 = new StringBuilder("");
         StringBuilder str2 = new StringBuilder("");
         filterChain.doFilter(str1,str2);
+        System.out.println("str1:" + str1.toString());
+        System.out.println("str2:" + str2.toString());
     }
 }
